@@ -1,1 +1,20 @@
 //main: ../style.less
+.container{
+  max-width: 1170px;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+  @media @notebook {
+    max-width: 1178px;
+  }
+  @media @tablet {
+    max-width: 970px;
+  }
+  @media @mobile {
+    max-width: 756px;
+  }
+  @media @mobile-sm{
+    max-width: 554px;
+  }
+}
