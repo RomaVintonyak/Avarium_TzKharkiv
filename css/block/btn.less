@@ -1,0 +1,24 @@
+//main: ../style.less
+.btn{
+  padding: 0.62rem 1rem;
+  border: none;
+  background-color: rgba(@orange, 0.8);
+  -webkit-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  font-style: normal;
+  font-weight: 700;
+  font-family: @nunito;
+  font-size: 1.5rem;
+  color: @white;
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    background-color: rgba(@orange, 0.9);
+    cursor: pointer;
+    &:active{
+      background-color: rgba(@orange, 1);
+    }
+  }
+}

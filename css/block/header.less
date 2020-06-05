@@ -1,0 +1,63 @@
+//main: ../style.less
+#header {
+  width: 100%;
+  height: 6.75rem;
+  background-color: @blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.header__content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav__item {
+  margin-right: 2rem;
+  padding: 0.62rem 1rem;
+  -webkit-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  a {
+    text-decoration: none;
+    color: @white;
+    font-style: normal;
+    font-weight: 300;
+    font-family: @nunito;
+    font-size: 1.5rem;
+    i {
+      color: @white;
+      font-size: 1rem;
+      margin-left: 0.3rem;
+    }
+  }
+  &:hover {
+    background-color: rgba(@orange, 0.9);
+    &:active {
+      background-color: rgba(@orange, 1);
+    }
+  }
+}

@@ -1,4 +1,4 @@
-jQuery(document).rady(function(){
+jQuery(document).ready(function(){
   "use script";
   
 });
