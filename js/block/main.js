@@ -1,20 +1,20 @@
-jQuery(document).ready(function(){
+jQuery(document).ready(function () {
   "use script";
   //show modal window
   var showModal = $("#quote");
   var modalWindow = $("#modalQuote");
-  showModal.on("click", function(){
+  showModal.on("click", function () {
     modalWindow.addClass("modal__window--show");
     $("body").css({
-      "overflow-y": "hidden"
+      "overflow-y": "hidden",
     });
   });
   //close modal window
   var closeModal = $("[data-close]");
-  closeModal.on("click", function(){
+  closeModal.on("click", function () {
     modalWindow.removeClass("modal__window--show");
     $("body").css({
-      "overflow-y": "scroll"
+      "overflow-y": "scroll",
     });
   });
   //slick slider initialize
@@ -23,16 +23,30 @@ jQuery(document).ready(function(){
     slidesToScroll: 1,
     arrows: false,
     dots: false,
-    cssEase: 'ease-in-out',
+    cssEase: "ease-in-out",
     speed: 500,
     infinite: true,
     /*responsive*/
     responsive: [
-{
-  breakpoint: 991,
-  settings: {
-    slidesToShow: 1
-  }
-}]
-});
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+  //controll slide
+  $(".btn__prev").on("click", function () {
+    var curentSlider = $(this)
+      .parent(".about__us--slider")
+      .find("#aboutSlider");
+    curentSlider.slick("slickPrev");
+  });
+  $(".btn__next").on("click", function () {
+    var curentSlider = $(this)
+      .parent(".about__us--slider")
+      .find("#aboutSlider");
+    curentSlider.slick("slickNext");
+  });
 });
