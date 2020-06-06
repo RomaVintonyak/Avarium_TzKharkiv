@@ -17,4 +17,22 @@ jQuery(document).ready(function(){
       "overflow-y": "scroll"
     });
   });
+  //slick slider initialize
+  $("#aboutSlider").slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    cssEase: 'ease-in-out',
+    speed: 500,
+    infinite: true,
+    /*responsive*/
+    responsive: [
+{
+  breakpoint: 991,
+  settings: {
+    slidesToShow: 1
+  }
+}]
+});
 });

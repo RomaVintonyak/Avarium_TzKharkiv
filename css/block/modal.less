@@ -1,5 +1,5 @@
 //main: ../style.less
-.modal__window{
+.modal__window {
   background: rgba(5, 34, 70, 0.55);
   position: fixed;
   top: 0;
@@ -8,20 +8,30 @@
   right: 0;
   z-index: 10;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 100vh;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: opacity 0.6s linear;
+  -o-transition: opacity 0.6s linear;
   transition: opacity 0.6s linear;
-  &--show{
+  &--show {
+    -webkit-transition: opacity 0.6s linear;
+    -o-transition: opacity 0.6s linear;
     transition: opacity 0.6s linear;
     visibility: visible;
     opacity: 1;
   }
 }
-.modal__body{
+.modal__body {
   width: 1145px;
   height: 890px;
   background-color: @orange;
@@ -29,63 +39,68 @@
   position: relative;
   z-index: 2;
 }
-.modal__button{
+.modal__button {
   position: absolute;
   top: 40px;
   right: 45px;
   background-color: transparent;
   border: none;
-  &:focus{
+  &:focus {
     outline: none;
   }
-  i{
+  i {
     color: @white;
     font-size: 1.5rem;
   }
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
-.modal__sota--big{
+.modal__sota--big {
   position: absolute;
   bottom: 45px;
   right: 25px;
 }
-.modal__title-bg{
+.modal__title-bg {
   position: absolute;
   top: 116px;
   left: 88px;
 }
-.modal__title{
+.modal__title {
   margin-top: 100px;
   font-style: normal;
   font-weight: 700;
   color: @blue;
   font-size: 3rem;
 }
-.modal__form{
+.modal__form {
   width: 40%;
   margin: 0 auto;
   margin-top: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  input{
+  input {
     width: 100%;
     height: 50px;
     margin: 0 0 30px 0;
-    &:focus{
+    &:focus {
       border-color: @blue;
     }
   }
-  label{
+  label {
     margin-bottom: 0.3rem;
-    color: #676B71;
+    color: #676b71;
     font-style: normal;
     font-weight: 300;
     font-family: @nunito;
     text-align: left;
   }
-  button{
+  button {
     width: 230px;
     height: 50px;
     background-color: rgba(@blue, 0.9);
@@ -94,18 +109,20 @@
     font-style: normal;
     font-weight: 700;
     font-family: @nunito;
+    -webkit-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
     transition: background-color 0.2s linear;
     margin: 0 auto;
-    &:focus{
+    &:focus {
       outline: none;
     }
-    &:hover{
+    &:hover {
       background-color: rgba(@blue, 1);
       cursor: pointer;
     }
   }
 }
-.errorText{
+.errorText {
   color: red;
   height: 1.3rem;
   font-size: 1rem;
