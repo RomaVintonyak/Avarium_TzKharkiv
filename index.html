@@ -47,7 +47,7 @@
   <!--contact form modal window-->
   <div id="modalQuote" class="modal__window">
     <div class="modal__body">
-      <button class="modal__button" id="modalClose"><i class="fas fa-times"></i></button>
+      <button class="modal__button" id="modalClose" data-close="modal-close"><i class="fas fa-times"></i></button>
       <img src="img/modal/sotas.png" alt="figure" class="modal__sota--big">
       <img src="img/modal/title.png" alt="figure" class="modal__title-bg">
       <h2 class="modal__title">Want a quote?<br/> Get a free consultation</h2>
@@ -59,6 +59,7 @@
         <label for="formPhone">Phone number</label>
         <input name="phone" id="formPhone" type="tel">
         <button id="modalSendmail" type="button">Send a request</button>
+        <div class="errorText"></div>
       </form>
     </div>
   </div>

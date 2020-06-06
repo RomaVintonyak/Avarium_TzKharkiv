@@ -10,15 +10,8 @@ jQuery(document).ready(function(){
     });
   });
   //close modal window
-  var closeModal = $("#modalClose");
-  var modalOverlay = $("#modalQuote");
+  var closeModal = $("[data-close]");
   closeModal.on("click", function(){
-    modalWindow.removeClass("modal__window--show");
-    $("body").css({
-      "overflow-y": "scroll"
-    });
-  });
-  modalOverlay.on("click", function(){
     modalWindow.removeClass("modal__window--show");
     $("body").css({
       "overflow-y": "scroll"
